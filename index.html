@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{{title}}</title>
+  <script type="text/javascript" src="lib/globals/toc.js"></script>
+</head>
+
+<body>
+  <div>
+    <h1 id="hello">Hello {{name}}</h1>
+  </div>
+  <img t-src="{{imageSource}}">
+  <p>{{content}}</p>
+</body>
+<script type="text/javascript">
+var element = document.querySelector('html');
+Toc.render(element, {
+  name: 'Toc.js',
+  title: 'Toc.js sample',
+  content: 'This webpage is a template filled with diferent fields.',
+  imageSource: 'https://pbs.twimg.com/profile_images/431818299291099136/Iia0gR8i_400x400.png',
+});
+console.log(Toc.render('I work with {{foo}} too!', {
+  foo: 'Strings'
+}));
+</script>
+
+</html>

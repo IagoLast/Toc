@@ -1,0 +1,28 @@
+{
+  "name": "toc",
+  "version": "1.0.0",
+  "description": "Small template system designed for browsers ",
+  "main": "lib/commonJS/toc.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "mocha": "^2.5.3",
+    "rollup": "^0.34.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.5.3"
+  },
+  "scripts": {
+    "postinstall": "node_modules/rollup/bin/rollup -c rollup.config.node.js && node_modules/rollup/bin/rollup -c rollup.config.browser.js",
+    "test": "node_modules/mocha/bin/mocha test/"
+  },
+  "keywords": [
+    "templates",
+    "html",
+    "javascript",
+    "small"
+  ],
+  "author": "@iagolast",
+  "license": "MIT"
+}
